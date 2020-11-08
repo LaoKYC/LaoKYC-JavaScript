@@ -148,8 +148,6 @@ Add this code to implement those three functions in our application::
         mgr.signoutRedirect();
     }
 
-.. Note:: See the :ref:`client credentials quickstart <refClientCredentialsQuickstart>` for information on how to create the api used in the code above.
-
 **callback.html**
 
 This HTML file is the designated ``redirect_uri`` page once the user has logged into IdentityServer.
@@ -176,42 +174,14 @@ Add this code to complete the signin process::
     </body>
     </html>
 
-Add a client registration to IdentityServer for the JavaScript client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now that the client application is ready to go, we need to define a configuration entry in IdentityServer for this new JavaScript client.
-In the IdentityServer project locate the client configuration (in `Config.cs`).
-Add a new `Client` to the list for our new JavaScript application.
-It should have the configuration listed below::
-
-    // JavaScript Client
-    new Client
-    {
-        ClientId = "js",
-        ClientName = "JavaScript Client",
-        AllowedGrantTypes = GrantTypes.Code,
-        RequireClientSecret = false,
-        
-        RedirectUris =           { "https://localhost:5003/callback.html" },
-        PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
-        AllowedCorsOrigins =     { "https://localhost:5003" },
-
-        AllowedScopes = 
-        {
-            IdentityServerConstants.StandardScopes.OpenId,
-            IdentityServerConstants.StandardScopes.Profile,
-            "api1"
-        }
-    }
-
-Allowing Ajax calls to the Web API with CORS
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Allowing Ajax calls to the Web API with CORS
 
 One last bit of configuration that is necessary is to configure CORS in the web API project. 
 This will allow Ajax calls to be made from `https://localhost:5003` to `https://localhost:6001`.
 
 **Configure CORS**
-
+> It's depend on your framework, in this tutorial we used dotnet core to build WebAPI Project
 Add the CORS services to the dependency injection system in ``ConfigureServices`` in `Startup.cs`::
 
     public void ConfigureServices(IServiceCollection services)
