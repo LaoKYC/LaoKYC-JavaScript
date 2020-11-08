@@ -18,7 +18,7 @@ If that folder does not exist in your project, create it now.
 
 In this quickstart in the `JavaScriptClient` project we need a similar library, except one that works in JavaScript and is designed to run in the browser.
 The [oidc-client library](https://github.com/IdentityModel/oidc-client-js) is one such library. 
-It is available via [PM](https://github.com/IdentityModel/oidc-client-js), [Bower](https://bower.io/search/?q=oidc-client>),  as well as a [direct download (https://github.com/IdentityModel/oidc-client-js/tree/release/dist) from github.]
+It is available via [PM](https://github.com/IdentityModel/oidc-client-js), [Bower](https://bower.io/search/?q=oidc-client>),  as well as a [direct download from github.](https://github.com/IdentityModel/oidc-client-js/tree/release/dist)
 
 **NPM**
 
