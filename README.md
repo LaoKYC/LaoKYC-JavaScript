@@ -1,56 +1,22 @@
 # LaoKYC- Adding a JavaScript client
-==========================
 
-.. note:: For any pre-requisites (like e.g. templates) have a look at the :ref:`overview <refQuickstartOverview>` first.
 
 This quickstart will show how to build a browser-based JavaScript client application (sometimes referred to as a "Single Page Application" or "`SPA`").
 
 The user will login to IdentityServer, invoke the web API with an access token issued by IdentityServer, and logout of IdentityServer. 
 All of this will be driven from the JavaScript running in the browser.
 
-New Project for the JavaScript client
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Create a new project for the JavaScript application.
-It can simply be an empty web project, an empty ASP.NET Core application, or something else like a Node.js application.
-This quickstart will use an ASP.NET Core application.
-
-Create a new "Empty" ASP.NET Core web application in the `~/src` directory.
-You can use Visual Studio or do this from the command line::
-
-    md JavaScriptClient
-    cd JavaScriptClient
-    dotnet new web
-
-As we have done before, with other client projects, add this project also to your solution. Run this from the root folder which has the sln file::
-
-    dotnet sln add .\src\JavaScriptClient\JavaScriptClient.csproj
-    
-Modify hosting
-^^^^^^^^^^^^^^^
+## New Project for the JavaScript client
 
 Modify the `JavaScriptClient` project to run on https://localhost:5003.
 
-Add the static file middleware
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Given that this project is designed to run client-side, all we need ASP.NET Core to do is to serve up the static HTML and JavaScript files that will make up our application.
-The static file middleware is designed to do this.
-
-Register the static file middleware in `Startup.cs` in the ``Configure`` method (and at the same time remove everything else)::
-
-    public void Configure(IApplicationBuilder app)
-    {
-        app.UseDefaultFiles();
-        app.UseStaticFiles();
-    }
 
 This middleware will now serve up static files from the application's `~/wwwroot` folder.
 This is where we will put our HTML and JavaScript files.
 If that folder does not exist in your project, create it now.
 
-Reference oidc-client
-^^^^^^^^^^^^^^^^^^^^^
+## Reference oidc-client
+
 
 In one of the previous quickstarts in the ASP.NET Core MVC-based client project we used a library to handle the OpenID Connect protocol. 
 In this quickstart in the `JavaScriptClient` project we need a similar library, except one that works in JavaScript and is designed to run in the browser.
