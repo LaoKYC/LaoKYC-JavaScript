@@ -202,6 +202,6 @@ And click the "API" button to invoke the web API:
 
 And finally click "Logout" to sign the user out.
 
-![Loggout](loggout.JPG)
+![Loggout](signout.JPG)
 
 You now have the start of a JavaScript client application that uses IdentityServer for sign-in, sign-out, and authenticating calls to web APIs.
