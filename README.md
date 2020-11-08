@@ -10,18 +10,15 @@ All of this will be driven from the JavaScript running in the browser.
 
 Modify the `JavaScriptClient` project to run on https://localhost:5003.
 
-
 This middleware will now serve up static files from the application's `~/wwwroot` folder.
 This is where we will put our HTML and JavaScript files.
 If that folder does not exist in your project, create it now.
 
 ## Reference oidc-client
 
-
-In one of the previous quickstarts in the ASP.NET Core MVC-based client project we used a library to handle the OpenID Connect protocol. 
 In this quickstart in the `JavaScriptClient` project we need a similar library, except one that works in JavaScript and is designed to run in the browser.
-The `oidc-client library <https://github.com/IdentityModel/oidc-client-js>`_ is one such library. 
-It is available via `NPM <https://github.com/IdentityModel/oidc-client-js>`_, `Bower <https://bower.io/search/?q=oidc-client>`_,  as well as a `direct download <https://github.com/IdentityModel/oidc-client-js/tree/release/dist>`_ from github.
+The [oidc-client library](https://github.com/IdentityModel/oidc-client-js) is one such library. 
+It is available via [PM](https://github.com/IdentityModel/oidc-client-js), [Bower](https://bower.io/search/?q=oidc-client>),  as well as a [direct download (https://github.com/IdentityModel/oidc-client-js/tree/release/dist)_ from github.]
 
 **NPM**
 
