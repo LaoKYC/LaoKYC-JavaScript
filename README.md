@@ -184,39 +184,12 @@ This will allow Ajax calls to be made from `https://localhost:5003` to `https://
 > It's depend on your framework, in this tutorial we used dotnet core to build WebAPI Project
 Add the CORS services to the dependency injection system in ``ConfigureServices`` in `Startup.cs`::
 
-    public void ConfigureServices(IServiceCollection services)
-    {
-        // ...
-
-        services.AddCors(options =>
-        {
-            // this defines a CORS policy called "default"
-            options.AddPolicy("default", policy =>
-            {
-                policy.WithOrigins("https://localhost:5003")
-                    .AllowAnyHeader()
-                    .AllowAnyMethod();
-            });
-        });
-    }
-
-Add the CORS middleware to the pipeline in ``Configure`` (just after routing)::
-
-    public void Configure(IApplicationBuilder app)
-    {
-        app.UseRouting();
-
-        app.UseCors("default");
-
-        // ...
-    }
-
-Run the JavaScript application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    
+### Run the JavaScript application
 
 Now you should be able to run the JavaScript client application:
 
-.. image:: images/jsclient_not_logged_in.png
+![StartApp](https://github.com/IdentityServer/IdentityServer4/raw/main/docs/quickstarts/images/jsclient_not_logged_in.png)
 
 Click the "Login" button to sign the user in.
 Once the user is returned back to the JavaScript application, you should see their profile information:
