@@ -1,7 +1,7 @@
 # LaoKYC- Adding a JavaScript client
 
 
-This quickstart will show how to build a browser-based JavaScript client application (sometimes referred to as a "Single Page Application" or "`SPA`").
+This quickstart will show how to build a browser-based JavaScript client application (sometimes referred to as a `Single Page Application` or `SPA`).
 
 The user will login to IdentityServer, invoke the web API with an access token issued by IdentityServer, and logout of IdentityServer. 
 All of this will be driven from the JavaScript running in the browser.
@@ -31,10 +31,10 @@ This downloads the latest `oidc-client` package locally, and then copies the rel
 
 **Manual download**
 
-If you want to simply download the `oidc-client` JavaScript files manually, browse to `the GitHub repository <https://github.com/IdentityModel/oidc-client-js/tree/release/dist>`_  and download the JavaScript files. Once downloaded, copy them into `~/wwwroot` so they can be served up by your application.
+If you want to simply download the `oidc-client` JavaScript files manually, browse to [the GitHub repository](https://github.com/IdentityModel/oidc-client-js/tree/release/dist)  and download the JavaScript files. Once downloaded, copy them into `~/wwwroot` so they can be served up by your application.
 
-Add your HTML and JavaScript files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### Add your HTML and JavaScript files
+
 
 Next is to add your HTML and JavaScript files to `~/wwwroot`.
 We will have two HTML files and one application-specific JavaScript file (in addition to the `oidc-client.js` library).
