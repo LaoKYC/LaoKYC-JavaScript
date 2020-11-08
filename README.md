@@ -1,6 +1,4 @@
-# LaoKYC-JavaScript
-.. _refJavaScriptQuickstart:
-Adding a JavaScript client
+# LaoKYC- Adding a JavaScript client
 ==========================
 
 .. note:: For any pre-requisites (like e.g. templates) have a look at the :ref:`overview <refQuickstartOverview>` first.
