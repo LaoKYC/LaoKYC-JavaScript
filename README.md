@@ -129,7 +129,18 @@ var config = new Configuration('https://login.oneid.sbg.la',
     'js',
     'https://localhost:44300/callback.html',
     'https://localhost:44300/',
-    'code', 'openid LaoKYC phone profile mkyc_api', true);
+    'code', 'openid LaoKYC phone profile', true);
+```
+
+For constructor we have important parameters:
+```
+authority = "https://login.oneid.sbg.la" --> this is authority Uri
+client_id = "js" --> this is client ID, you should used other client for production
+redirect_uri = "https://localhost:44300/callback.html" --> this is redirect uri, where can our SSO redirect back to your app/site after login success
+post_logout_redirect_uri = "https://localhost:44300/" --> this is redirect uri, where can out SSO redirect back to your app/site after logout success
+response_type = "code" --> this is response type, we used code for SPA and other native app
+scope = "openid LaoKYC phone profile" --> this is scope where can client access to resources
+revokeAccessTokenOnSignout = true --> we allow revoke access token when token is refernce type
 ```
 
 Next, we can use the ``renderUI`` function to render Login UI
