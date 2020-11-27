@@ -188,17 +188,16 @@ Now you should be able to run the JavaScript client application:
 
 ![StartApp](login-laokyc.JPG)
 
+Click the "Request OTP" button to request one time password:
+ 
+![OTP](login-modal.JPG)
+
 Click the "Login" button to sign the user in.
 Once the user is returned back to the JavaScript application, you should see their profile information:
  
-![Loggin](https://github.com/IdentityServer/IdentityServer4/raw/main/docs/quickstarts/images/jsclient_logged_in.png)
+![Loggin](oneid-login.JPG)
 
-And click the "API" button to invoke the web API:
+Now application will callback to index.html
 
-![ClickAPI](https://github.com/IdentityServer/IdentityServer4/raw/main/docs/quickstarts/images/jsclient_api_results.png)
+![Callback](callback.JPG)
 
-And finally click "Logout" to sign the user out.
-
-![Loggout](signout.JPG)
-
-You now have the start of a JavaScript client application that uses IdentityServer for sign-in, sign-out, and authenticating calls to web APIs.
