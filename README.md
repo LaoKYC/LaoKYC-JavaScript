@@ -149,47 +149,11 @@ Next, we can use the ``renderUI`` function to render Login UI
 renderUI(config, 'lo');
 ```
 
-Next, the ``UserManager`` provides a ``getUser`` API to know if the user is logged into the JavaScript application.
-It uses a JavaScript ``Promise`` to return the results asynchronously. 
-The returned ``User`` object has a ``profile`` property which contains the claims for the user.
-Add this code to detect if the user is logged into the JavaScript application::
+Next, we display info after login callback to selector ``<div id="id-token"></div>
 
-    mgr.getUser().then(function (user) {
-        if (user) {
-            log("User logged in", user.profile);
-        }
-        else {
-            log("User not logged in");
-        }
-    });
-
-Next, we want to implement the ``login``, ``api``, and ``logout`` functions. 
-The ``UserManager`` provides a ``signinRedirect`` to log the user in, and a ``signoutRedirect`` to log the user out.
-The ``User`` object that we obtained in the above code also has an ``access_token`` property which can be used to authenticate to a web API.
-The ``access_token`` will be passed to the web API via the `Authorization` header with the `Bearer` scheme.
-Add this code to implement those three functions in our application::
-
-    function login() {
-        mgr.signinRedirect();
-    }
-
-    function api() {
-        mgr.getUser().then(function (user) {
-            var url = "https://localhost:6001/identity";
-
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", url);
-            xhr.onload = function () {
-                log(xhr.status, JSON.parse(xhr.responseText));
-            }
-            xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
-            xhr.send();
-        });
-    }
-
-    function logout() {
-        mgr.signoutRedirect();
-    }
+```
+showTokens(config, '#id-token');
+```
 
 **callback.html**
 
@@ -197,7 +161,7 @@ This HTML file is the designated ``redirect_uri`` page once the user has logged 
 It will complete the OpenID Connect protocol sign-in handshake with IdentityServer. 
 The code for this is all provided by the ``UserManager`` class we used earlier. 
 Once the sign-in is complete, we can then redirect the user back to the main `index.html` page. 
-Add this code to complete the signin process::
+Add this code to complete the signin process
 
     <!DOCTYPE html>
     <html>
@@ -217,17 +181,7 @@ Add this code to complete the signin process::
     </body>
     </html>
 
-
-### Allowing Ajax calls to the Web API with CORS
-
-One last bit of configuration that is necessary is to configure CORS in the web API project. 
-This will allow Ajax calls to be made from `https://localhost:5003` to `https://localhost:6001`.
-
-**Configure CORS**
-> It's depend on your framework, in this tutorial we used dotnet core to build WebAPI Project
-Add the CORS services to the dependency injection system in ``ConfigureServices`` in `Startup.cs`::
-
-    
+ 
 ### Run the JavaScript application
 
 Now you should be able to run the JavaScript client application:
