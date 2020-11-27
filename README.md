@@ -48,7 +48,25 @@ It will also contain the ``<script>`` tags to include our two JavaScript files.
 It will also contain a ``<pre>`` used for showing messages to the user.
 
 It should look like this
-``Test``
+```
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <button id="login">Login</button>
+        <button id="api">Call API</button>
+        <button id="logout">Logout</button>
+
+        <pre id="results"></pre>
+
+        <script src="oidc-client.js"></script>
+        <script src="app.js"></script>
+    </body>
+    </html>
+```
 **app.js**
 
 This will contain the main code for our application.
