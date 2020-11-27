@@ -48,63 +48,23 @@ It will also contain the ``<script>`` tags to include our two JavaScript files.
 It will also contain a ``<pre>`` used for showing messages to the user.
 
 It should look like this::
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-    <link href="libs/bootstrap.min.css" rel="stylesheet" />
-    <link href="StyleSheet.css" rel="stylesheet" />
-</head>
-<body>
-    <div class="container">
-        <header class="page-header">
-            <h1>JavaScript Oidc Client</h1>
-        </header>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <button id="login">Login</button>
+        <button id="api">Call API</button>
+        <button id="logout">Logout</button>
 
-        <div class="row">
-            <div id="kyc-login"></div>
-        </div>
+        <pre id="results"></pre>
 
-        <div class="row">
-            <ul class="list-unstyled list-inline">
-            </ul>
-        </div>
-
-        <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-heading">Message</div>
-                <div class="panel-body">
-                    <pre id="response"></pre>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Current User</div>
-                    <div class="panel-body">
-                        <pre id="id-token"></pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Ajax Result</div>
-                    <div class="panel-body">
-                        <pre id="ajax-result"></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="libs/oidc-client.js"></script>
-    <script type="module" defer src="app.js"></script>
-</body>
-</html>
-
+        <script src="oidc-client.js"></script>
+        <script src="app.js"></script>
+    </body>
+    </html>
 
 **app.js**
 
