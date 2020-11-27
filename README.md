@@ -48,7 +48,7 @@ It will also contain the ``<script>`` tags to include our two JavaScript files.
 It will also contain a ``<pre>`` used for showing messages to the user.
 
 It should look like this
-`
+``
     <!DOCTYPE html>
     <html>
     <head>
@@ -66,7 +66,7 @@ It should look like this
         <script src="app.js"></script>
     </body>
     </html>
-`
+``
 **app.js**
 
 This will contain the main code for our application.
