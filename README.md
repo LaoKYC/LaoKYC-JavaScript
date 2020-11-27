@@ -186,7 +186,7 @@ Add this code to complete the signin process
 
 Now you should be able to run the JavaScript client application:
 
-![StartApp](https://github.com/IdentityServer/IdentityServer4/raw/main/docs/quickstarts/images/jsclient_not_logged_in.png)
+![StartApp](login-laokyc.JPG)
 
 Click the "Login" button to sign the user in.
 Once the user is returned back to the JavaScript application, you should see their profile information:
