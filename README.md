@@ -170,7 +170,7 @@ Add this code to complete the signin process
         <title></title>
     </head>
     <body>
-        <script src="oidc-client.js"></script>
+        <script src="libs/oidc-client.js"></script>
         <script>
             new Oidc.UserManager({response_mode:"query"}).signinRedirectCallback().then(function() {
                 window.location = "index.html";
