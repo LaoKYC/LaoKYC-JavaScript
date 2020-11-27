@@ -114,41 +114,29 @@ It should look like this
 **app.js**
 
 This will contain the main code for our application.
-The first thing is to add a helper function to log messages to the ``<pre>``::
+The first thing is to add a ``kyc-oidc.min.js`` to ``libs`` folder. Then ``import`` module
 
-    function log() {
-        document.getElementById('results').innerText = '';
+```
+import Configuration, { renderUI, showTokens } from './libs/kyc-oidc.min.js'
+```
 
-        Array.prototype.forEach.call(arguments, function (msg) {
-            if (msg instanceof Error) {
-                msg = "Error: " + msg.message;
-            }
-            else if (typeof msg !== 'string') {
-                msg = JSON.stringify(msg, null, 2);
-            }
-            document.getElementById('results').innerHTML += msg + '\r\n';
-        });
-    }
-
-Next, add code to register ``click`` event handlers to the three buttons::
-
-    document.getElementById("login").addEventListener("click", login, false);
-    document.getElementById("api").addEventListener("click", api, false);
-    document.getElementById("logout").addEventListener("click", logout, false);
-
-Next, we can use the ``UserManager`` class from the `oidc-client` library to manage the OpenID Connect protocol. 
+Next, we can use the ``Configuration`` class from the `kyc-oidc` library to manage the OpenID Connect protocol. 
 It requires similar configuration that was necessary in the MVC Client (albeit with different values). 
-Add this code to configure and instantiate the ``UserManager``::
+Add this code to configure and instantiate the ``UserManager``
 
-    var config = {
-        authority: "https://login.oneid.sbg.la",
-        client_id: "js",
-        redirect_uri: "https://localhost:5003/callback.html",
-        response_type: "code",
-        scope:"openid profile",
-        post_logout_redirect_uri : "https://localhost:5003/index.html",
-    };
-    var mgr = new Oidc.UserManager(config);
+```
+var config = new Configuration('https://login.oneid.sbg.la',
+    'js',
+    'https://localhost:44300/callback.html',
+    'https://localhost:44300/',
+    'code', 'openid LaoKYC phone profile mkyc_api', true);
+```
+
+Next, we can use the ``renderUI`` function to render Login UI
+
+```
+renderUI(config, 'lo');
+```
 
 Next, the ``UserManager`` provides a ``getUser`` API to know if the user is logged into the JavaScript application.
 It uses a JavaScript ``Promise`` to return the results asynchronously. 
