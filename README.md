@@ -33,6 +33,10 @@ This downloads the latest `oidc-client` package locally, and then copies the rel
 
 If you want to simply download the `oidc-client` JavaScript files manually, browse to [the GitHub repository](https://github.com/IdentityModel/oidc-client-js/tree/release/dist)  and download the JavaScript files. Once downloaded, copy them into `~/wwwroot` so they can be served up by your application.
 
+**LaoKYC JS Lib**
+
+You must download our Lib from our [Github repository](https://github.com/LaoKYC/LaoKYC-JavaScript/blob/main/JsOidc/wwwroot/libs/kyc-oidc.min.js) to automate login button and form
+
 ### Add your HTML and JavaScript files
 
 
