@@ -8,7 +8,7 @@ All of this will be driven from the JavaScript running in the browser.
 
 ## New Project for the JavaScript client
 
-Modify the `JavaScriptClient` project to run on https://localhost:5003.
+Modify the `JavaScriptClient` project to run on https://localhost:44300.
 
 This middleware will now serve up static files from the application's `~/wwwroot` folder.
 This is where we will put our HTML and JavaScript files.
