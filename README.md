@@ -22,7 +22,7 @@ It is available via [PM](https://github.com/IdentityModel/oidc-client-js), [Bowe
 
 **NPM**
 
-If you want to use NPM to download `oidc-client`, then run these commands from your `JavaScriptClient` project directory::
+If you want to use NPM to download `oidc-client`, then run these commands from your `JavaScriptClient` project directory
 
     npm i oidc-client
     copy node_modules\oidc-client\dist\* wwwroot
@@ -47,7 +47,8 @@ It will simply contain the HTML for the buttons for the user to login, logout, a
 It will also contain the ``<script>`` tags to include our two JavaScript files.
 It will also contain a ``<pre>`` used for showing messages to the user.
 
-It should look like this::
+It should look like this
+`
     <!DOCTYPE html>
     <html>
     <head>
@@ -65,7 +66,7 @@ It should look like this::
         <script src="app.js"></script>
     </body>
     </html>
-
+`
 **app.js**
 
 This will contain the main code for our application.
