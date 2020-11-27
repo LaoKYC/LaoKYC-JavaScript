@@ -48,8 +48,7 @@ It will also contain the ``<script>`` tags to include our two JavaScript files.
 It will also contain a ``<pre>`` used for showing messages to the user.
 
 It should look like this::
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
