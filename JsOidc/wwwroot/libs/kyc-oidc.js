@@ -25,7 +25,7 @@ export function renderUI(config, lang) {
     // set the attributes for link element  
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'css/kyc-style.css'; 
+    link.href = 'https://rawcdn.githack.com/LaoKYC/LaoKYC-JavaScript/021e553ad3372d0711e0d121ec2b65d19bdfd143/JsOidc/wwwroot/css/kyc-style.css'; 
 
     var font = document.createElement('link');
     font.rel = 'stylesheet';
@@ -41,9 +41,9 @@ export function renderUI(config, lang) {
     var imgBtn = document.createElement("img");
     imgBtn.style = 'width: 180px;';
     if (lang === 'lo') {
-        imgBtn.src = "img/signin-lo.png";
+        imgBtn.src = "https://rawcdn.githack.com/LaoKYC/LaoKYC-JavaScript/021e553ad3372d0711e0d121ec2b65d19bdfd143/JsOidc/wwwroot/img/signin-lo.png";
     } else {
-        imgBtn.src = "img/signin-en.png";
+        imgBtn.src = "https://rawcdn.githack.com/LaoKYC/LaoKYC-JavaScript/021e553ad3372d0711e0d121ec2b65d19bdfd143/JsOidc/wwwroot/img/signin-en.png";
     }
     loginBtn.appendChild(imgBtn);
     const currentDiv = document.getElementById("kyc-login");
@@ -90,7 +90,7 @@ export function renderUI(config, lang) {
         divImg.className = 'imgcontainer';
         var img = document.createElement('img');
         img.className = 'avatr';
-        img.src = 'img/banner.png'
+        img.src = 'https://rawcdn.githack.com/LaoKYC/LaoKYC-JavaScript/021e553ad3372d0711e0d121ec2b65d19bdfd143/JsOidc/wwwroot/img/banner.png'
         img.width = 100;
         divImg.appendChild(img);
 
