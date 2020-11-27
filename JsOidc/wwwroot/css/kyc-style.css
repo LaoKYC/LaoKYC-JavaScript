@@ -1,93 +1,88 @@
-﻿
-.kyc-form {
-    border: 1px solid #f1f1f1;
+﻿.kyc-form {
+    border: 1px solid #f1f1f1
 }
 
 ::placeholder {
-    font-family: 'Noto Sans lao';
+    font-family: 'Noto Sans lao'
 }
 
-.kyc-number[type=text], .kyc-number[type=password] {
+.kyc-number[type=password], .kyc-number[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 10px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 50px;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 .btnOtp {
     background-color: #6abfb1;
-    color: white;
+    color: #fff;
     padding: 14px 20px;
     margin: 10px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     width: 100%;
-    font-family: 'Noto Sans lao';
+    font-family: 'Noto Sans lao'
 }
 
     .btnOtp:hover {
-        opacity: 0.8;
+        opacity: .8
     }
 
 .cancelbtn {
     width: auto;
     padding: 26px 20px;
-    background-color: #f44336;
+    background-color: #f44336
 }
 
 .imgcontainer {
-    text-align: center;
+    text-align: center
 }
 
 img.avatar {
     width: 20%;
-    border-radius: 50%;
+    border-radius: 50%
 }
 
 .kyc-container {
     padding: 30px;
-    text-align: center;
+    text-align: center
 }
 
-/* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0,0,0,.4)
 }
 
-/* Modal Content */
 .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 80%
 }
 
-/* The Close Button */
 .close {
-    color: #aaaaaa;
+    color: #aaa;
     float: right;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 700
 }
 
-    .close:hover,
-    .close:focus {
+    .close:focus, .close:hover {
         color: #000;
         text-decoration: none;
-        cursor: pointer;
+        cursor: pointer
     }

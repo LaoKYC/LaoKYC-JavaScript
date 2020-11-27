@@ -4,5 +4,5 @@ mgr.signinRedirectCallback().then(function (user) {
     window.history.replaceState({},
         window.document.title,
         window.location.origin + window.location.pathname);
-    window.location = "index.html";
+    window.location = "/";
 });
