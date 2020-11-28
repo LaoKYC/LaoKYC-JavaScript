@@ -154,6 +154,21 @@ Next, we display info after login callback to selector ``<div id="id-token"></di
 ```
 showTokens(config, '#id-token');
 ```
+Now, our ``app.js`` should be:
+
+```
+import Configuration, { renderUI, showTokens } from './libs/kyc-oidc.min.js'
+
+var config = new Configuration('https://login.oneid.sbg.la',
+    'js',
+    'https://localhost:44300/callback.html',
+    'https://localhost:44300/',
+    'code', 'openid LaoKYC phone profile mkyc_api', true);
+
+renderUI(config, 'lo');
+
+showTokens(config, '#id-token');
+```
 
 **callback.html**
 
