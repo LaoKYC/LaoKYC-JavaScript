@@ -148,7 +148,7 @@ Next, we can use the ``renderUI`` function to render Login UI
 ```
 renderUI(config, 'lo');
 ```
-Remark: for ``renderUI`` we support only 2 languages  (``en`` and ``lo``)
+Remark: for current version ``renderUI`` we support only 2 languages  (``en`` and ``lo``)
 
 Next, we display info after login callback to selector ``<div id="id-token"></div>
 
